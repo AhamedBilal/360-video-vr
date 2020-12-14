@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>360 VR Video</title>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-assets>
+        <video id="video360" preload="auto"
+               src="assets/360_VR.mp4"
+               width="160" height="90" autoplay="true"  loop="true"
+               crossOrigin="anonymous" muted></video>
+    </a-assets>
+    <a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+    <a-videosphere src="#video360" rotation="0 90 0"></a-videosphere>
+</a-scene>
+
+<script>
+    let video = document.getElementById('video360');
+    video.muted = false;
+</script>
+</body>
+</html>
